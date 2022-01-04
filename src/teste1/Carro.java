@@ -39,6 +39,19 @@ public class Carro {
 		this.ipva = ipva;
 	}
 	
+	public void calcIpva() {
+		if(ano < 2010)
+			ipva = valor*2/100;
+		else if(ano < 2015)
+			ipva = valor*3/100;
+		else if(ano < 2018)
+			ipva = valor*4/100;
+		else
+			ipva = valor*2/100;
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Carro [modelo=" + modelo + "]";
